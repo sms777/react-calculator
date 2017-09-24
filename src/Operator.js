@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Number extends Component {
+class Operator extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,11 +17,11 @@ class Number extends Component {
 
   render() {
     return (
-      <div className="number">
-        <button onClick={this.handleClick} >{this.props.amount}</button>
+      <div className="operator">
+        <button onClick={this.handleClick} >{this.props.symbol}</button>
       </div>
     );
   }
 }
 
-export default Number;
+export default Operator;

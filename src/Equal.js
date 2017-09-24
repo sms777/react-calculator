@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Number extends Component {
+class Equal extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,16 +12,16 @@ class Number extends Component {
 
   handleClick(e) {
   	e.persist();
-  	this.props.keyPress(e);
+  	this.props.compute(e);
   }
 
   render() {
     return (
-      <div className="number">
-        <button onClick={this.handleClick} >{this.props.amount}</button>
+      <div className="equal">
+        <button onClick={this.handleClick} >=</button>
       </div>
     );
   }
 }
 
-export default Number;
+export default Equal;
