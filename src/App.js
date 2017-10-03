@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 import Number from './Number'
 import Operator from './Operator'
 import Equal from './Equal'
 import Display from './Display'
+import Clear from './Clear'
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +16,7 @@ class App extends Component {
 
     this.keyPress = this.keyPress.bind(this)
     this.computeTotal = this.computeTotal.bind(this)
+    this.clear = this.clear.bind(this)
   }
 
   keyPress(e) {
@@ -24,7 +25,12 @@ class App extends Component {
   }
 
   computeTotal() {
+    // change eval to something safer
     this.setState({total: eval(this.state.input), toggleTotal: true})
+  }
+
+  clear() {
+    this.setState({total: '', input: '', toggleTotal: false})
   }
 
   render() {
@@ -45,6 +51,7 @@ class App extends Component {
         {numberKeysList}
         {operatorKeysList}
         <Equal compute={this.computeTotal} />
+        <Clear clear={this.clear} />
       </div>
     );
   }
