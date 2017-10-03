@@ -18,7 +18,7 @@ class Equal extends Component {
   render() {
     return (
       <div className="equal">
-        <button onClick={this.handleClick} >=</button>
+        <div onClick={this.handleClick} >=</div>
       </div>
     );
   }

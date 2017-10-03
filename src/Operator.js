@@ -18,7 +18,7 @@ class Operator extends Component {
   render() {
     return (
       <div className="operator">
-        <button onClick={this.handleClick} >{this.props.symbol}</button>
+        <div onClick={this.handleClick} >{this.props.symbol}</div>
       </div>
     );
   }

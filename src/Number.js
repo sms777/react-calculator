@@ -18,7 +18,7 @@ class Number extends Component {
   render() {
     return (
       <div className="number">
-        <button onClick={this.handleClick} >{this.props.amount}</button>
+        <div onClick={this.handleClick} >{this.props.amount}</div>
       </div>
     );
   }

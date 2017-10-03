@@ -18,7 +18,7 @@ class Clear extends Component {
   render() {
     return (
       <div className="clear">
-        <button onClick={this.handleClick} >Clear</button>
+        <div onClick={this.handleClick} >Clear</div>
       </div>
     );
   }
