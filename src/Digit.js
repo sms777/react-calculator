@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Clear extends Component {
+class Digit extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,14 +10,14 @@ class Clear extends Component {
 
   handleClick = (e) => {
   	e.persist();
-  	this.props.clear(e);
+  	this.props.keyPress(e);
   }
 
   render() {
     return (
-      <div className="clear" onClick={this.handleClick} >Clear</div>
+      <div className="number" onClick={this.handleClick} >{this.props.amount}</div>
     );
   }
 }
 
-export default Clear;
+export default Digit;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Number from './Number'
+import Digit from './Digit'
 import Operator from './Operator'
 import Equal from './Equal'
 import Display from './Display'
@@ -13,34 +13,30 @@ class App extends Component {
       input: '',
       toggleTotal: false,
     };
-
-    this.keyPress = this.keyPress.bind(this)
-    this.computeTotal = this.computeTotal.bind(this)
-    this.clear = this.clear.bind(this)
   }
 
-  keyPress(e) {
+  keyPress = (e) => {
     e.preventDefault();
     this.setState(previousState => ({input: (previousState.input + e.target.innerText)}))
   }
 
-  computeTotal() {
+  computeTotal = () => {
     // change eval to something safer
     this.setState({total: eval(this.state.input), toggleTotal: true})
   }
 
-  clear() {
+  clear = () => {
     this.setState({total: '', input: '', toggleTotal: false})
   }
 
   render() {
     let numberKeysList = []
     for (var i=0; i < 10; i++) {
-      numberKeysList.push(<Number amount={i} keyPress={this.keyPress} />);
+      numberKeysList.push(<Digit amount={i} keyPress={this.keyPress} />);
     }
 
     let operatorKeysList = []
-    const symbols = ['x','/','+','-']
+    const symbols = ['*','/','+','-']
     for (var s of symbols) {
       operatorKeysList.push(<Operator symbol={s} keyPress={this.keyPress} />);
     }

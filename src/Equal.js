@@ -6,20 +6,16 @@ class Equal extends Component {
     super(props);
     this.state = {
     };
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
+  handleClick = (e) => {
   	e.persist();
   	this.props.compute(e);
   }
 
   render() {
     return (
-      <div className="equal">
-        <div onClick={this.handleClick} >=</div>
-      </div>
+      <div className="equal" onClick={this.handleClick} >=</div>
     );
   }
 }

@@ -6,20 +6,16 @@ class Operator extends Component {
     super(props);
     this.state = {
     };
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
+  handleClick = (e) => {
   	e.persist();
   	this.props.keyPress(e);
   }
 
   render() {
     return (
-      <div className="operator">
-        <div onClick={this.handleClick} >{this.props.symbol}</div>
-      </div>
+      <div className="operator" onClick={this.handleClick} >{this.props.symbol}</div>
     );
   }
 }
