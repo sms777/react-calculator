@@ -19,12 +19,22 @@ body {
   padding-top: 25px;
 }
 
+.number:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
 .operator {
   width: 50%;
   height: 40px;
   display: inline-block;
   background-color: #78AEFE;
   padding-top: 25px;
+}
+
+.operator:hover {
+  cursor: pointer;
+  opacity: .9;
 }
 
 .clear {
@@ -35,10 +45,20 @@ body {
   padding-top: 25px;
 }
 
+.clear:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
 .equal {
   height: 40px;
   width: 50%;
   display: inline-block;
   background-color: #D4EE9F;
   padding-top: 25px;
+}
+
+.equal:hover {
+  cursor: pointer;
+  opacity: .9;
 }
